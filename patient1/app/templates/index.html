@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Hi, {{user.nickname}}!</h1>
+{% for post in posts %}
+<h2>{{post.patient.name}}</h2>
+<div><p><b>Patient Name: </b>{{post.patient.name}}<b>  //  Date of Birth:</b>   {{post.dob}}</p></div>
+<div><p><b>Address:  </b>{{post.address}}  <b>//  Email:</b>  {{post.email}}</p></div>
+<div><p><b>Social Security ID: </b>{{post.ssn}}  <b>//  Insurance:</b>  {{post.insurance}}</p></div>
+{% endfor %}
+{% endblock %}
